@@ -34,23 +34,40 @@ Java / JSP / Servlet / SQL を用いて開発した Web アプリケーション
 
 ## 📂 ディレクトリ構成
 ```
-project/
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   ├── servlet/
-│   │   │   │   ├── LoginServlet.java
-│   │   │   │   ├── RegisterServlet.java
-│   │   │   │   └── ListServlet.java
-│   │   │   └── dao/
-│   │   │       └── UserDAO.java
-│   │   ├── webapp/
-│   │   │   ├── WEB-INF/web.xml
-│   │   │   ├── jsp/login.jsp
-│   │   │   ├── jsp/register.jsp
-│   │   │   └── css/style.css
-│   └── test/
-└── README.md
+MyECProject
+├─ JRE システム・ライブラリー [JavaSE-21]
+├─ Tomcat10 (Java21)
+├─ 参照ライブラリー
+│
+├─ src
+│  └─ main
+│     ├─ java
+│     │   └─ ec
+│     │       ├─ controller
+│     │       │    ├─ CartServlet.java
+│     │       │    ├─ OrderServlet.java
+│     │       │    └─ ProductServlet.java
+│     │       │
+│     │       ├─ DBUtil.java
+│     │       └─ ProductDAO.java
+│     │
+│     └─ webapp
+│         ├─ css
+│         │    └─ style.css
+│         ├─ images
+│         ├─ META-INF
+│         ├─ WEB-INF
+│         ├─ cart.jsp
+│         ├─ index.jsp
+│         ├─ login.jsp
+│         ├─ orderComplete.jsp
+│         ├─ orderConfirm.jsp
+│         └─ productList.jsp
+│
+├─ build
+│
+└─ README.md
+
 ```
 
 ---

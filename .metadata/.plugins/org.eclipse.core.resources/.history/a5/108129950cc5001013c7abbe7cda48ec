@@ -1,0 +1,168 @@
+/* 全体 */
+.cart-container {
+  max-width: 920px;
+  margin: 40px auto;
+  padding: 24px;
+  background: linear-gradient(180deg, #f7fdfa 0%, #f0fbf9 100%);
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(2, 48, 36, 0.08);
+  border: 1px solid rgba(2, 128, 96, 0.06);
+  font-family: "Noto Sans JP", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* タイトル */
+.cart-container h2 {
+  font-size: 1.9rem;
+  color: #054f45;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 3px solid rgba(4, 159, 122, 0.12);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cart-container h2:before {
+  content: "🐟";
+  font-size: 1.2rem;
+}
+
+/* 商品リスト */
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px dashed rgba(4, 79, 66, 0.06);
+  transition: background 0.25s, transform 0.18s;
+}
+.cart-item:hover {
+  background: linear-gradient(90deg, rgba(230,255,250,0.6), rgba(248,255,253,0.6));
+  transform: translateY(-2px);
+}
+
+/* 商品画像 */
+.cart-item img {
+  width: 92px;
+  height: 68px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 18px;
+  box-shadow: 0 6px 16px rgba(2, 48, 36, 0.06);
+  border: 2px solid rgba(4, 159, 122, 0.06);
+}
+
+/* 商品情報 */
+.item-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.item-details .item-name {
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: #023b35;
+}
+.item-details .item-sub {
+  font-size: 0.9rem;
+  color: #567b74;
+}
+.item-details .item-price {
+  color: #0b8f71;
+  font-weight: 800;
+  margin-top: 4px;
+  background: linear-gradient(90deg, rgba(11,143,113,0.06), rgba(11,143,113,0.02));
+  padding: 6px 8px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+/* 数量・削除ボタン */
+.item-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.item-actions input[type="number"] {
+  width: 66px;
+  padding: 8px;
+  border: 1px solid rgba(3, 87, 76, 0.12);
+  border-radius: 10px;
+  text-align: center;
+  background: #ffffff;
+  color: #033b34;
+  box-shadow: inset 0 -2px 6px rgba(0,0,0,0.03);
+}
+.remove-btn {
+  background: linear-gradient(180deg, #ff6b6b, #f44336);
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.12s, box-shadow 0.12s;
+  box-shadow: 0 6px 18px rgba(244,67,54,0.12);
+}
+.remove-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(244,67,54,0.14);
+}
+
+/* 合計セクション */
+.cart-summary {
+  text-align: right;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.cart-summary .total-label {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #023b35;
+}
+.cart-summary .total-price {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #064c43;
+  background: linear-gradient(90deg, rgba(4,159,122,0.08), rgba(11,143,113,0.02));
+  padding: 10px 14px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+/* 購入ボタン */
+.checkout-btn {
+  background: linear-gradient(180deg, #07a37b, #056a53);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 14px;
+  border: none;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 12px 28px rgba(5,106,83,0.18);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.checkout-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(5,106,83,0.22);
+}
+
+/* 小さな装飾：泡アイコンと薄い波線 */
+.cart-container:after {
+  content: "";
+  display: block;
+  margin-top: 16px;
+  height: 8px;
+  background-image: radial-gradient(circle at 10% 50%, rgba(4,159,122,0.06) 1px, transparent 1px), radial-gradient(circle at 60% 50%, rgba(4,159,122,0.04) 1px, transparent 1px);
+  background-size: 30px 8px;
+  opacity: 0.9;
+}
+
+/* レスポンシブ微調整 */
+@media (max-width: 640px) {
+  .cart-item { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .cart-item img { width: 100%; height: 140px; object-fit: cover; }
+  .item-actions { width: 100%; justify-content: space-between; }
+  .cart-summary { align-items: stretch; text-align: left; }
+}

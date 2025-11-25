@@ -1,50 +1,70 @@
-# 🌐 Webアプリケーション開発ポートフォリオ（Java / JSP / Servlet）
-
-## 📘 概要
-Java / JSP / Servlet / SQL を用いて開発した Web アプリケーションです。  
-ユーザー管理・データ登録・検索などの CRUD 処理を実装し、MVC 設計と DB 連携を学習目的で作成しました。
+# 🐟 Freshwater Fish Shop  
+淡水魚を扱うECサイトのポートフォリオ作品です。
 
 ---
 
-## 🛠 開発環境
-| 項目 | 内容 |
-|------|------|
-| 言語 | Java（JDK 17 など） |
-| フレームワーク | Servlet / JSP（Jakarta EE） |
-| データベース | H2DB|
-| ビルドツール | Apache Maven または Eclipse Dynamic Web Project |vv
-| アプリケーションサーバー | Apache Tomcat 10.x |
-| IDE | Eclipse / IntelliJ IDEA / VS Code |
-| バージョン管理 | Git / GitHub |
-| OS |  Windows |
+## 📌 概要（Overview）
+淡水魚を販売するECサイトを想定して作成しました。  
+商品一覧表示、カート、注文処理などの基本機能を実装しています。
 
 ---
 
-## 🧩 機能一覧
-1. ユーザー関連
-
-ログイン機能
-DBUtil.javaでDB接続しユーザー認証
-
-2. 商品関連（Product）
-
-商品一覧表示
-
-商品情報管理（DAO / Service）
-
-商品価格・説明取得
-（コード上は表示用中心っぽい）
-
-3. カート機能（Cart）
-カート追加
-カート内容表示
-
-4. 注文関連（Order）
-注文確認画面
-注文内容の確認
-注文完了
+## ✨ 主な機能（Features）
+- 商品一覧表示（生体）
+- 商品詳細ページ
+- カート機能
+- 注文（擬似注文）機能
+- 在庫ステータス表示
+- カテゴリ / 検索 / 絞り込み
 
 ---
+
+## 🛠 使用技術（Tech Stack）
+Frontend:
+JSP（Java Server Pages）
+HTML / CS
+
+Backend:
+Java（Servlet）
+Tomcat 10（Java21）
+
+Database :　H2DB
+
+Build / Tools:
+
+Maven / Eclipse
+
+
+
+---
+
+## 💡 工夫したポイント（Key Points）
+- 
+- 淡水魚ショップらしい UI（色味・アイコン）を意識  
+- カート処理・在庫処理を簡潔なロジックに整理  
+- データをコンポーネントごとに分離し可読性を向上  
+- 今後機能を足しやすい構成を意識  
+
+---
+
+## 🚀 使い方（How to Use）
+
+### ローカル環境で実行
+```bash
+git clone <このリポジトリURL>
+cd <フォルダ名>
+npm install
+npm run dev
+```
+
+### デモURL（任意）
+- https://xxxx.vercel.app  
+（デプロイしていれば書く）
+
+---
+
+## 📁 ディレクトリ構成（Directory Structure）
+```
 
 ## 📂 ディレクトリ構成
 ```
@@ -83,93 +103,22 @@ MyECProject
 └─ README.md
 
 ```
+```
 
 ---
 
-## 🗄 データベース構成
-### 📘 ER図
-> 画像を `docs/er_diagram.png` に差し替えてください。  
-> 例：  
-> ![ER図](./docs/er_diagram.png)
-
-### テーブル定義例：users
-
-|H2DB JDBC URL  : jdbc:h2:~/ecdb;MODE=MySQL;AUTO_SERVER=TRUE
-| カラム名 | 型 | 説明 |
-|-----------|----|------|
-| id | INT | 主キー（AUTO_INCREMENT） |
-| name | VARCHAR(50) | ユーザー名 |
-| email | VARCHAR(100) | メールアドレス |
-| password | VARCHAR(255) | ハッシュ化されたパスワード |
-| created_at | DATETIME | 登録日時 |
-
----
-
-## 🧠 設計方針・工夫点
-- MVC設計：Servlet（Controller）、DAO（Model）、JSP（View）を分離
-- SQLインジェクション対策として **PreparedStatement** を使用
-- パスワードは **ハッシュ化（SHA-256 / bcrypt）** して保存
-- JSP include によるヘッダー・フッターの共通化
-- ER図・シーケンス図を用いて処理を明確化
-
----
-
-## 📊 UML / 設計資料
-> 以下のファイルを差し替えてください（今はプレースホルダー画像です）：
->
-> - `docs/usecase.png`：ユースケース図  
-> - `docs/uml_sequence.png`：シーケンス図  
-> - `docs/class_diagram.png`：クラス図  
->
-> 例：  
-> ![シーケンス図](./docs/uml_sequence.png)
-
----
-
-## 💬 使用技術のポイント
-- **Servlet & JSP**：HTTPリクエスト処理・セッション管理・リダイレクト制御  
-- **DAOパターン**：DB操作の共通化・保守性向上  
-- **SQL**：CRUD・JOIN・トランザクション  
-- **HTML/CSS**：UI / フォーム入力補助  
-- **Tomcat**：WARデプロイ・ローカルテスト環境構築  
-
----
-
-## 🧭 今後の拡張予定
-- Bootstrap / Vue.js の導入でUI改善  
-- REST API 化（JSON対応）  
-- Docker による環境構築自動化  
-- ログイン履歴・アクセスログの分析機能追加  
-- JUnit / Mockito による単体テストの充実  
-
----
-
-## 📸 画面キャプチャ（例）
-> - `docs/login_screen.png`  
-> - `docs/list_screen.png`  
->
-> 例：  
-> ![ログイン画面](./docs/login_screen.png)
-
----
-
-## 🧾 ライセンス・著作権
-このプロジェクトは学習目的で作成したものであり、商用利用は想定していません。  
-各種ライブラリ・ツールのライセンスはそれぞれの作者に帰属します。
+## 📝 今後追加したい機能（Future Improvements）
+- 生体発送日の自動計算
+- 入荷通知 / お気に入り
+- ユーザー認証
+- 注文履歴
+- もっと詳細な検索（サイズ、水質、混泳可否）
+- 商品レビュー
 
 ---
 
 ## 👤 作成者
-- **氏名：umeshu0233
-- **開発期間**：2025年11~
-- **連絡先**：umedashunyacoco@gmail.com
+- **氏名**：umesh0233
+- **開発期間**：2025年11月〜12月  
+- **連絡先** umedashunyacoco@gmail.com
 - **GitHub**：https://github.com/umeshu0233/ec-project.git
-
----
-
-## ✅ 最終更新日
-2025-11-20
-
----
-
-> ✏️ **編集方法**：VS Code / Typora などの Markdown 対応エディタで開くと、見出しや画像をプレビューできます。

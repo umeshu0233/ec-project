@@ -14,7 +14,6 @@
 - 商品詳細ページ
 - カート機能
 - 注文（擬似注文）機能
--
 
 ---
 
@@ -46,27 +45,10 @@ Maven / Eclipse
 
 ---
 
-## 🚀 使い方（How to Use）
-
-### ローカル環境で実行
-```bash
-git clone <このリポジトリURL>
-cd <フォルダ名>
-npm install
-npm run dev
-```
-
-### デモURL（任意）
-- https://xxxx.vercel.app  
-（デプロイしていれば書く）
-
 ---
 
 ## 📁 ディレクトリ構成（Directory Structure）
-```
 
-## 📂 ディレクトリ構成
-```
 ```
 MyECProject
 ├─ JRE システム・ライブラリー [JavaSE-21]
@@ -118,6 +100,6 @@ MyECProject
 
 ## 👤 作成者
 - **氏名**：umesh0233
-- **開発期間**：2025年11月〜12月  
+- **開発期間**：2025年11月〜12月
 - **連絡先** umedashunyacoco@gmail.com
-- **GitHub**：https://github.com/umeshu0233/ec-project.git
+- **GitHub**：https://github.com/umeshu0233/ec-project.git 

@@ -37,7 +37,6 @@ Maven / Eclipse
 ---
 
 ## 💡 工夫したポイント（Key Points）
-- 
 - 淡水魚ショップらしい UI（色味・アイコン）を意識  
 - カート処理・在庫処理を簡潔なロジックに整理  
 - データをコンポーネントごとに分離し可読性を向上  
@@ -102,4 +101,4 @@ MyECProject
 - **氏名**：umesh0233
 - **開発期間**：2025年11月〜12月
 - **連絡先** umedashunyacoco@gmail.com
-- **GitHub**：https://github.com/umeshu0233/ec-project.git 
+- **GitHub**：https://github.com/umeshu0233/ec-project.git  

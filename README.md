@@ -99,6 +99,6 @@ MyECProject
 
 ## 👤 作成者
 - **氏名**：umesh0233
-- **開発期間**：2025年11月〜12月
+- **開発期間**：2025年11月〜11月28
 - **連絡先** umedashunyacoco@gmail.com
 - **GitHub**：https://github.com/umeshu0233/ec-project.git  
